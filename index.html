@@ -5,17 +5,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../normalize.css">
-    <link rel="stylesheet" href="/styles.css">
-    <script defer src="/script.js"></script>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
     <title>Ejercicios DOM</title>
 </head>
 <body>
-    <header class="header">
+    <header id="header" class="header">
         <h1 class="header__title">Ejercicios DOM</h1>
     </header>
     <main class="main">
         <div class="menu__box">
-            <img class="menu__img" src="/assets/img/menu_cerrado.png" alt="menu haburguesa">
+            <img class="menu__img" src="assets/img/menu_cerrado.png" alt="menu haburguesa">
+        </div>
+        <div class="menu__box-back">
+            <a href="#header"><img  class="menu__img-back" src="assets/img/up-arrow.png" alt="menu back"></a>
         </div>
         <nav class="main__nav">
             <ul class="main__ul">
