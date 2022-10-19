@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../normalize.css">
     <link rel="stylesheet" href="styles.css">
-    <script defer src="script.js"></script>
     <title>Ejercicios DOM</title>
 </head>
 <body>
@@ -22,7 +21,7 @@
         </div>
         <nav class="main__nav">
             <ul class="main__ul">
-                <li class="main__li"><a class="main__a" href="#sect1">Sección 1</a></li>
+                <li class="main__li"><a class="main__a" href="#sect1">Reloj y Alarma</a></li>
                 <li class="main__li"><a class="main__a" href="#sect2">Sección 2</a></li>
                 <li class="main__li"><a class="main__a" href="#sect3">Sección 3</a></li>
                 <li class="main__li"><a class="main__a" href="#sect4">Sección 4</a></li>
@@ -30,7 +29,18 @@
             </ul>
         </nav>
         <section id="sect1" class="main__section">
-            <h2 class="main__h2">Seccion 1</h2>
+            <h2 class="main__h2">Reloj Digital y Alarma Sonora</h2>
+            <div class="reloj">
+                <div id="reloj">
+                    
+                </div>
+                <div class="botonera">
+                    <button class="btn_reloj" id="activar_reloj">Activar</button>
+                    <button class="btn_reloj" id="detener_reloj">Detener</button>
+                    <button class="btn_reloj" id="activar_alarma">Alarma</button>
+                    <button class="btn_reloj" id="detener_alarma">Silenciar</button>
+                </div>
+            </div>
         </section>
         <section id="sect2" class="main__section">
             <h2 class="main__h2">Seccion 2</h2>
@@ -45,5 +55,7 @@
             <h2 class="main__h2">Seccion 5</h2>
         </section>
     </main>
+    
+    <script type="module" src="script.js"></script>
 </body>
 </html>
