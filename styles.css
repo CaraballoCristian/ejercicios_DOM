@@ -220,3 +220,40 @@ body{
 .btn_reloj:hover:disabled{
     background-color: gray;
 }
+
+/*A PARTIR DE ACA ESTA EL GAME*/
+.container_game{
+    display: flex;
+    margin-inline: auto;
+    width: min(600px, 90vw);
+    min-height: 30vh;
+    border: solid 3px var(--clr-main);
+    background-color: #333;
+    box-shadow: #333 0 0 10px;
+
+}
+
+#ball{
+    background-color: #333;
+    box-shadow: var(--clr-main) 0 0 5px, var(--clr-main) inset -10px -10px 15px;
+    
+    margin: auto;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+
+    transition: all .2s ease;
+}
+
+.textos_game{
+    border:solid 2px black;
+    border-radius: 10px;
+    width: min(500px, 100vw);
+    margin: 5rem auto;
+}
+
+/*Estilos auxiliares*/
+
+#sect1{
+    display: none;
+}
