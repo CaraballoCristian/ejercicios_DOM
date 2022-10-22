@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/x-icon" href="assets/img/favicon.png">
     <title>Ejercicios DOM</title>
 </head>
 <body>
@@ -12,17 +13,24 @@
         <h1 class="header__title">Ejercicios DOM</h1>
     </header>
     <main class="main">
-        <div class="menu__box">
-            <img class="menu__img" src="assets/img/menu_cerrado.png" alt="menu haburguesa">
+        <div class="button_box menu__box">
+            <img class="theme_icon" id="menu__img" src="assets/img/menu_cerrado.png" alt="menu haburguesa">
+            <img class="theme_icon" id="menu__img-dark" src="assets/img/menu_cerrado-dark.png" alt="menu haburguesa">
         </div>
-        <div class="menu__box-back">
-            <a href="#header"><img  class="menu__img-back" src="assets/img/up-arrow.png" alt="menu back"></a>
+        <div class="button_box menu__box-back" id="btn_back">
+            <img class="theme_icon" id="menu__img-back-dark" src="assets/img/up-arrow-dark.png" alt="menu back">
+            <img class="theme_icon" id="menu__img-back" src="assets/img/up-arrow.png" alt="menu back">
+
+        </div>
+        <div class="button_box" id="dark_mode">
+            <img class="theme_icon" id="dark_moon" src="assets/img/moon.png" alt="Icono de tema oscuro">
+            <img class="theme_icon" id="dark_sun" src="assets/img/sun.png" alt="Icono de tema oscuro">
         </div>
         <nav class="main__nav">
             <ul class="main__ul">
                 <li class="main__li"><a class="main__a" href="#sect1">Reloj y Alarma</a></li>
-                <li class="main__li"><a class="main__a" href="#sect2">Sección 2</a></li>
-                <li class="main__li"><a class="main__a" href="#sect3">Sección 3</a></li>
+                <li class="main__li"><a class="main__a" href="#sect2">Game y Shortcuts</a></li>
+                <li class="main__li"><a class="main__a" href="#sect3">Countdown</a></li>
                 <li class="main__li"><a class="main__a" href="#sect4">Sección 4</a></li>
                 <li class="main__li"><a class="main__a" href="#sect5">Sección 5</a></li>  
             </ul>
@@ -34,10 +42,10 @@
                     
                 </div>
                 <div class="botonera">
-                    <button class="btn_reloj" id="activar_reloj">Activar</button>
-                    <button class="btn_reloj" id="detener_reloj">Detener</button>
-                    <button class="btn_reloj" id="activar_alarma">Alarma</button>
-                    <button class="btn_reloj" id="detener_alarma">Silenciar</button>
+                    <button class="btn" id="activar_reloj">Activar</button>
+                    <button class="btn" id="detener_reloj">Detener</button>
+                    <button class="btn" id="activar_alarma">Alarma</button>
+                    <button class="btn" id="detener_alarma">Silenciar</button>
                 </div>
             </div>
         </section>
@@ -54,7 +62,14 @@
             </div>
         </section>
         <section id="sect3" class="main__section">
-            <h2 class="main__h2">Seccion 3</h2>
+            <h2 class="main__h2">Countdown</h2>
+            <div id="container_countdown">
+                <h3 id="countdown_title">Tiempo Hasta Año Nuevo:</h3>
+                <h3 id="countdown"></h3>
+            </div>
+            <div class="botones_countdown">
+                <button class="btn" id="btn_countdown">Ingresar Fecha</button>
+            </div>
         </section>
         <section id="sect4" class="main__section"> 
             <h2 class="main__h2">Seccion 4</h2>

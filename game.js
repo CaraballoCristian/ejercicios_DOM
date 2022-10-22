@@ -1,35 +1,53 @@
 const d = document;
 
-
 let x = 0;
 let y = 0;
-export function game(){
-    
-    const $stage = d.querySelector(".container_game");
-    const limitStage = $stage.getBoundingClientRect();
 
-    const $ball = d.getElementById("ball");
-    const limitBall = $ball.getBoundingClientRect();
-    
-    d.addEventListener("keydown", e =>{
-        console.log(limitStage,limitBall);
+export function game(e){
+   if(!d.querySelector("body").classList.contains("no-scroll")){ 
+        const $stage = d.querySelector(".container_game");
+        let limitsStage = $stage.getBoundingClientRect();
+
+        const $ball = d.getElementById("ball");
+        let limitsBall = $ball.getBoundingClientRect();
+        
         if(e.key === "ArrowUp"){
-            e.preventDefault();
-            /* if(limitBall.top > limitStage.top) */ y--;
+            if(limitsBall.top > limitsStage.top + limitsBall.width){
+                e.preventDefault();
+                y--;  
+            } 
         }
         if(e.key === "ArrowDown"){
-            e.preventDefault(); 
-            /* if(limitBall.bottom > limitStage.bottom) */ y++;
+            if(limitsBall.bottom < limitsStage.bottom - limitsBall.height) {
+                e.preventDefault(); 
+                y++;
+            } 
         }
         if(e.key === "ArrowLeft"){
-            e.preventDefault(); 
-            /* if(limitBall.left > limitStage.left) */ x--;
+            if(limitsBall.left > limitsStage.left + limitsBall.width) {
+                e.preventDefault(); 
+                x--;  
+            } 
         }
         if(e.key === "ArrowRight"){ 
-            e.preventDefault(); 
-            /* if(limitBall.right > limitStage.right)  */x++;
+            if(limitsBall.right < limitsStage.right - limitsBall.height) {
+                e.preventDefault(); 
+                x++;
+            }
         } 
+        $ball.style.transform = `translate(${x*10}px, ${y*10}px)`;
+    }
+}
 
-        $ball.style.transform = `translate(${x*10}px, ${y*10}px)`
-    });
+export function shortcuts(e){
+
+    if(e.altKey && (e.key === "a" || e.key === "A")){
+        alert("haz lanzado una alerta");
+    }
+    if(e.ctrlKey && (e.key === "p" || e.key === "P")){
+        prompt("haz lanzado un prompt");
+    }
+    if(e.shiftKey && (e.key === "c" || e.key === "C")){
+        confirm("haz lanzado un confirm");
+    }
 }

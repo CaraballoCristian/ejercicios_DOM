@@ -1,4 +1,7 @@
-import { game } from "./game.js";
+import { btnBack } from "./btn_back.js";
+import { countdown } from "./countdown.js";
+import { dark } from "./dark_mode.js";
+import { game, shortcuts } from "./game.js";
 import hamburgerMenu from "./ham_menu.js";
 import {reloj, alarma} from "./reloj.js";
 
@@ -8,17 +11,13 @@ d.addEventListener("DOMContentLoaded", e =>{
     hamburgerMenu();
     reloj();
     alarma();
-    game();
+    countdown(); 
+    btnBack();
 });
 
 d.addEventListener("keydown", e =>{
-    if(e.altKey && (e.key === "a" || e.key === "A")){
-        alert("haz lanzado una alerta");
-    }
-    if(e.ctrlKey && (e.key === "p" || e.key === "P")){
-        prompt("haz lanzado un prompt");
-    }
-    if(e.shiftKey && (e.key === "c" || e.key === "C")){
-        confirm("haz lanzado un confirm");
-    }
-});
+    shortcuts(e);
+    game(e);
+}); 
+
+dark();

@@ -16,7 +16,6 @@ export default function hamburgerMenu(){
             }else{
                 $img.setAttribute("src", "assets/img/menu_cerrado.png");
             }
-
         }
     })
 }
