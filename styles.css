@@ -392,16 +392,26 @@ input{
 }
 /*estilos de cartas*/
 #filtro__input{
-    margin:2rem;
+    margin-bottom: 2rem;
     width: min(100%, 1000px);
 }
 
 #cards{
-    width: min(100%, 1200px);
-    margin-inline:auto;
-    padding:0;
+    width: min(100%, 1300px);
+    border-radius: 20px;
+    border:solid var(--clr-txt) 3px;
+    max-height: 70vmin;
+    min-height: 450px;
+    overflow: auto;
+    margin-inline: auto;
+    padding-block: 1rem;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(min(100%, 25rem), 1fr));
+    scrollbar-width:none;
+}
+
+#cards::-webkit-scrollbar{
+    display:none;
 }
 .card{
     background-color: var(--clr-txt);
@@ -424,11 +434,27 @@ input{
     font-size: 2rem;
 }
 .filtered{
-    display: none;
+    visibility: hidden;
+    opacity: 0;
+    order: 1;
 }
+#container__sorteo{
+    border:solid var(--clr-txt) 3px;
+    border-radius: 10px;
+    width: min(100%, 800px);
+    margin-inline:auto;
+    padding-block: 2rem;
+    font-size: 1.5rem;
+    box-shadow: var(--clr-txt) 0 0 15px, inset var(--clr-txt) 0 0 5px;
+
+}
+#resultado__sorteo{
+    font-size: 2rem;
+
+}
+
 /*Estilos auxiliares*/
-#sect1, #sect2, #sect3, #sect4, #sect5, #sect6, #sect7, #sect8{
+#sect1, #sect2, #sect3, #sect4, #sect5, #sect6, #sect7, #sect8, #sect9{
   display: none;
-  visibility: ;
 }
 

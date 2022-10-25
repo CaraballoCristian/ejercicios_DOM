@@ -12,6 +12,7 @@ import hamburgerMenu from "./ham_menu.js";
 import {reloj, alarma} from "./reloj.js";
 import { responsiveJs } from "./responsive_con_js.js";
 import { tester } from "./responsive_tester.js";
+import sorteo from "./sorteo.js";
 import webcamDetection from "./webcam_detection.js";
 
 /////////////////////////VARIABLES/////////////////////////
@@ -59,8 +60,22 @@ d.addEventListener("DOMContentLoaded", e =>{
     deviceDetection();
     webcamDetection();
     geolocalization();
-    cardGenerator("90", "640", "480")
+    cardGenerator("30", "640", "480")
     filter();
+    sorteo([
+        "enero",
+        "febrero",
+        "marzo",
+        "abril",
+        "mayo",
+        "junio",
+        "julio",
+        "agosto",
+        "septiembre",
+        "octubre",
+        "noviembre",
+        "diciembre",
+    ]);
 });
 
 /////////////////////////KEYOWN////////////////////////////
