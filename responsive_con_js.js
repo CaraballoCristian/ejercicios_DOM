@@ -1,22 +1,20 @@
 const d = document;
 const w = window;
 
-export function responsiveJs(id, mq, mobile, desktop){
+export function responsiveJs(id, breakpoint, mobile, desktop){
     
-    let breakpoint = w.matchMedia(mq);
+    const element = d.getElementById(id);
 
     const responsive = e => {
-        const element = d.getElementById(id);
-        //e.matches es un boolean que sera true cuando se cumpla la media query
-        if(e.matches){
-            element.innerHTML = desktop;
+        if(w.innerWidth > breakpoint){
+            element.innerHTML = desktop; 
         }else{
             element.innerHTML = mobile;
         }
     }
-    breakpoint.addListener(responsive)
+    
+    w.addEventListener("resize", e =>{
+        responsive();
+    })
+    responsive();
 }
-
-
-//rezise y load
-//windows.matchMedia

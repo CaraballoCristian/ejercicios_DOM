@@ -53,6 +53,8 @@ body{
     white-space: nowrap;
 }
 
+
+
 .header{
     background-color:var(--clr-main);
     position:absolute;
@@ -140,6 +142,7 @@ body{
 
     background-color: rgba(0, 0, 0, .7);
     transition: all .5s ease;
+    z-index: 999;
 }
 
 .main__li{
@@ -163,6 +166,7 @@ body{
 
 .main__section{
     padding-top: 1%;
+    padding-inline: 1rem;
     min-height: 100vh;
     background-color: var(--clr-sec);
     color: var(--clr-txt);
@@ -236,6 +240,7 @@ body{
 }
 .btn:hover{
     background-color: var(--clr-main);
+    color: #333
 }
 .btn_reloj:hover:disabled{
     background-color: gray;
@@ -249,7 +254,7 @@ body{
     min-height: 30vh;
     border: solid 3px var(--clr-main);
     background-color: #333;
-    box-shadow: var(--clr-txt) 0 0 10px;
+    box-shadow: var(--clr-txt) 0 0 10px;  
 
 }
 
@@ -282,9 +287,148 @@ body{
     box-shadow: var(--clr-txt) 0 0 10px;
 }
 
-
-
-
-/*Estilos auxiliares*/
-#sect1, #sect2, #sect3{
+#video{
+    overflow: hidden;
+    width:100%;
+    margin-inline:auto;
+    margin-top: 3rem;
 }
+
+#video iframe{
+    width:min(100vw, 1000px);
+    height: 50vh;
+}
+#maps{
+    margin-top: 3rem;
+}
+/*a partir de aca es el responsive tester*/
+input{
+    margin:0;
+    padding:0;
+}
+#tester{
+    display: flex;
+    flex-direction: column;
+    margin: 5% auto;
+    border: var(--clr-txt) solid 3px;
+    box-shadow: var(--clr-txt) 0 0 30px, inset var(--clr-txt) 0 0 10px;
+    border-radius: 20px;
+    padding:2rem;
+    width: min(400px, 100%);
+    
+    box-sizing: border-box;
+}
+.tester__input{
+    font-size: 1.5rem;
+    margin-block: 1rem;
+    max-width: 80%;
+    background-color: transparent;
+    border:none;
+    border-bottom: var(--clr-txt) solid 3px;
+    border-radius: 50vh;
+    padding: .5rem 1.5rem;
+    color: var(--clr-txt);
+    transition: all .5s ease;
+}
+.tester__input:focus{
+    outline: none;
+    
+    box-shadow: var(--clr-txt) 0 0 15px, inset var(--clr-txt) 0 0 5px;
+}
+.tester__buttons{
+    margin-top: 1rem;
+    display: flex;
+    width: 90%;
+    margin-inline: auto;
+    justify-content: space-evenly;
+    font-size: 1.5rem;
+}
+
+.tester__btn{
+    padding-inline: 2rem;
+    box-shadow: inset var(--clr-txt) 0 0 10px;
+}
+
+.banner{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    height: 0;
+    transition: all .3s ease;
+    font-size: 2rem;
+}
+.online{
+    background-color: green;
+    height: 8vh;
+}
+.offline{
+    background-color: red;
+    height: 8vh;
+}
+
+.webcam__box{
+    border: solid var(--clr-txt) 4px;
+    border-radius: 20px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+    margin: 2rem auto;
+    padding: 2rem;
+}
+
+.geo__box{
+    border: solid var(--clr-txt) 4px;
+    border-radius: 20px;
+    width: fit-content;
+    padding: 2rem;
+    margin-inline: auto;
+    display: flex;
+}
+/*estilos de cartas*/
+#filtro__input{
+    margin:2rem;
+    width: min(100%, 1000px);
+}
+
+#cards{
+    width: min(100%, 1200px);
+    margin-inline:auto;
+    padding:0;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 25rem), 1fr));
+}
+.card{
+    background-color: var(--clr-txt);
+    border:solid var(--clr-txt) 10px;
+    width: min(100%, 300px);
+    color: var(--clr-sec);
+    border-radius: 10px;
+    overflow: hidden;
+    margin:1rem auto 1rem;
+    transition: all .5s ease;
+}
+
+.card:hover{
+    transform: scale(1.05);
+    box-shadow: var(--clr-txt) 0 0px 20px;
+}
+
+.card__caption{
+    margin: 1rem auto 2rem;
+    font-size: 2rem;
+}
+.filtered{
+    display: none;
+}
+/*Estilos auxiliares*/
+#sect1, #sect2, #sect3, #sect4, #sect5, #sect6, #sect7, #sect8{
+  display: none;
+  visibility: ;
+}
+
