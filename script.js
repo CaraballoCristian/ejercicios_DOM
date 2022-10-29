@@ -1,4 +1,5 @@
 ///////////////////////IMPORTACIONES///////////////////////
+import createArrObj from "./arrObjGenerator.js";
 import { btnBack } from "./btn_back.js";
 import cardGenerator from "./cardGenerator.js";
 import conectionCheck from "./conection_check.js";
@@ -12,6 +13,7 @@ import hamburgerMenu from "./ham_menu.js";
 import {reloj, alarma} from "./reloj.js";
 import { responsiveJs } from "./responsive_con_js.js";
 import { tester } from "./responsive_tester.js";
+import slider from "./slider.js";
 import sorteo from "./sorteo.js";
 import webcamDetection from "./webcam_detection.js";
 
@@ -25,14 +27,14 @@ d.addEventListener("DOMContentLoaded", e =>{
     alarma();
     countdown(); 
     btnBack();
-    responsiveJs(
+    /* responsiveJs(
         "video", 
         "800", 
         `<a target="_BLANK" href="https://www.youtube.com/embed/NOTUg0306Yc">Ver Video!</a>`,
         `<iframe 
             width="1904" 
             height="772" 
-            src="https://www.youtube.com/embed/NOTUg0306Yc" 
+            src="#"
             title="Awesome fight animation" 
             frameborder="0" 
             allow="accelerometer; 
@@ -48,14 +50,14 @@ d.addEventListener("DOMContentLoaded", e =>{
         "800", 
         `<a target="_BLANK" href="https://www.google.com/maps">Ver Mapa!</a>` ,
         `<iframe 
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1642.0114775830477!2d-58.38203238300352!3d-34.60358104066273!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4aa9f0a6da5edb%3A0x11bead4e234e558b!2sObelisco!5e0!3m2!1ses!2sar!4v1666502891338!5m2!1ses!2sar" 
+            src="#" 
             width="600" 
             height="450" 
             style="border:0;" 
             allowfullscreen="" 
             loading="lazy" 
             referrerpolicy="no-referrer-when-downgrade">
-        </iframe>`);
+        </iframe>`); */
     tester();
     deviceDetection();
     webcamDetection();
@@ -76,6 +78,9 @@ d.addEventListener("DOMContentLoaded", e =>{
         "noviembre",
         "diciembre",
     ]);
+    slider(
+        createArrObj(10, "600", "360", "Imagen")
+        );
 });
 
 /////////////////////////KEYOWN////////////////////////////

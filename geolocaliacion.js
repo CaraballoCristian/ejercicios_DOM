@@ -34,7 +34,7 @@ export default function geolocalization(){
                 <li>Error: <mark>${err.message}</mark></li>
             <ul>
         `
-        console.log(err)
+        //console.log(err)
     };
     n.geolocation.getCurrentPosition(succes, error, options);
 }

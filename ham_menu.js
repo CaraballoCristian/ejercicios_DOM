@@ -3,9 +3,7 @@ export default function hamburgerMenu(){
     const $img = d.querySelector("#menu__img");
     
     const toggleClasses = e => {
-        d.querySelector(".main__nav").classList.toggle("hidden");
-        d.querySelector(".main__ul").classList.toggle("hidden2");
-        d.querySelector("body").classList.toggle("no-scroll");
+        d.querySelector(".main__ul").classList.toggle("hidden");
         d.querySelector(".menu__box").classList.toggle("rotate");
     }
 
@@ -27,11 +25,17 @@ export default function hamburgerMenu(){
 
         if (e.target.matches(".main__nav")){
             if(($img.getAttribute("src") === "assets/img/menu_abierto.png")){
-                console.log("abierto")
                 toggleImg();
                 toggleClasses();
             }
         } 
         
+    })
+
+    d.addEventListener("keyup", e => {
+        if(e.key === "Escape" && $img.getAttribute("src") === "assets/img/menu_abierto.png"){
+            toggleImg();
+            toggleClasses();
+        }
     })
 }

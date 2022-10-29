@@ -12,7 +12,7 @@ const msToTime = function(res){
     let m = Math.floor((((aux - d)*24) - h) * 60);
     let s = Math.floor((((((aux - d)*24) - h) * 60) - m) * 60);
     
-    return `${d} Dias ${h} Horas ${m} Minutos ${s} Segundos`
+    return `<h5>${d} Dias ${h} Horas ${m} Minutos ${s} Segundos</h5>`
 }
 
 d.addEventListener("click", (e) =>{
