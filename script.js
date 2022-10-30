@@ -13,6 +13,7 @@ import hamburgerMenu from "./ham_menu.js";
 import {reloj, alarma} from "./reloj.js";
 import { responsiveJs } from "./responsive_con_js.js";
 import { tester } from "./responsive_tester.js";
+import scrollSpy from "./scroll_spy.js";
 import slider from "./slider.js";
 import sorteo from "./sorteo.js";
 import webcamDetection from "./webcam_detection.js";
@@ -62,7 +63,7 @@ d.addEventListener("DOMContentLoaded", e =>{
     deviceDetection();
     webcamDetection();
     geolocalization();
-    cardGenerator("30", "640", "480")
+    cardGenerator("10", "640", "480")
     filter();
     sorteo([
         "enero",
@@ -80,7 +81,9 @@ d.addEventListener("DOMContentLoaded", e =>{
     ]);
     slider(
         createArrObj(10, "600", "360", "Imagen")
-        );
+    );
+    scrollSpy();
+
 });
 
 /////////////////////////KEYOWN////////////////////////////

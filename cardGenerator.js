@@ -21,7 +21,7 @@ export default function cardGenerator(cantCards, width, height){
             break;
             case 6: topic = "animals";
             break;
-            default: console.log("default", random);
+            default: break;
         }
 
         $card.classList.add("card");

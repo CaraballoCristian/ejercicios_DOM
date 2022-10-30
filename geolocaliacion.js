@@ -29,12 +29,7 @@ export default function geolocalization(){
         `
     };
     const error = (err) => {
-        $div.innerHTML = `
-            <ul>
-                <li>Error: <mark>${err.message}</mark></li>
-            <ul>
-        `
-        //console.log(err)
+        $div.innerHTML = `<p>Error: <mark>${err.message}</mark></p>`
     };
     n.geolocation.getCurrentPosition(succes, error, options);
 }

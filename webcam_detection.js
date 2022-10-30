@@ -5,6 +5,7 @@ export default function webcamDetetion() {
     const $video = d.getElementById("webcam");
     const $videoBox = d.getElementById("webcam__box");
     $videoBox.classList.add("webcam__box");
+    $videoBox.style.fontSize = "1.5rem";
 
     n.mediaDevices.getUserMedia({video: true, audio: true})
     .then(stream => {

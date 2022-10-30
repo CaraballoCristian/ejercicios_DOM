@@ -9,6 +9,7 @@ export default function slider(arrObj){
     let prevPos = arrObj.length-1;
     let currPos = 0;    
     let nextPos = 1;
+    let transitionEnd = true;
     /////////////////////////FUNCIONES/////////////////////////////
     const createNode = (i) => {
         const $imgBox= d.createElement("div");
@@ -65,27 +66,32 @@ export default function slider(arrObj){
         }
     }
     const changeBox = function(direction, imgPos, style, boxPos){
-        moveIndex(direction);
-        transition(direction);
-        $title.innerHTML = `<h3>${arrObj[currPos].title}</h3>`
-        agregar(imgPos, style, boxPos);
-        if(direction.toLowerCase() === "forward") $boxes.removeChild($boxes.firstElementChild);
-        if(direction.toLowerCase() === "backward") $boxes.removeChild($boxes.lastElementChild);
+        if(transitionEnd){
+            transitionEnd = false;
+            moveIndex(direction);
+            transition(direction);
+            $title.innerHTML = `<h3>${arrObj[currPos].title}</h3>`
+            agregar(imgPos, style, boxPos);
+            if(direction.toLowerCase() === "forward") $boxes.removeChild($boxes.firstElementChild);
+            if(direction.toLowerCase() === "backward") $boxes.removeChild($boxes.lastElementChild);
+        }
     }
     //////////////////////INVOCACIONES/////////////////////////////
     inicializar();
     const intervalo = setInterval(() => {
         changeBox("forward", nextPos, "slide__next", "beforeend");
-    },5000);
+    },4000);
 
     d.addEventListener("click", e =>{
         if(e.target === $nextBtn || e.target.matches("slider__btn-next *")){
-            clearInterval(intervalo);
             changeBox("forward", nextPos, "slide__next", "beforeend");
         }
         if (e.target === $prevBtn || e.target.matches("slider__btn-prev *")){
-            clearInterval(intervalo);
             changeBox("backward", prevPos, "slide__prev", "afterbegin");
         }
+   })
+
+   d.addEventListener("transitionend", e => {
+     transitionEnd = true;
    })
 }
