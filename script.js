@@ -16,6 +16,8 @@ import { tester } from "./responsive_tester.js";
 import scrollSpy from "./scroll_spy.js";
 import slider from "./slider.js";
 import sorteo from "./sorteo.js";
+import validateForm from "./validacion_formularios.js";
+import smartVideo from "./video_inteligente.js";
 import webcamDetection from "./webcam_detection.js";
 
 /////////////////////////VARIABLES/////////////////////////
@@ -83,6 +85,8 @@ d.addEventListener("DOMContentLoaded", e =>{
         createArrObj(10, "600", "360", "Imagen")
     );
     scrollSpy();
+    smartVideo();
+    validateForm();
 
 });
 

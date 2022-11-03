@@ -40,7 +40,7 @@
                 <li class="main__li"><a class="main__a" href="#sect10">Sorteo</a></li>  
                 <li class="main__li"><a class="main__a" href="#sect11">Slider Responsive</a></li>  
                 <li class="main__li"><a class="main__a" href="#sect12">Video Inteligente</a></li>  
-                <li class="main__li"><a class="main__a" href="#sect13">Sección 13</a></li>  
+                <li class="main__li"><a class="main__a" href="#sect13">Validacion de Formularios</a></li>  
                 <li class="main__li"><a class="main__a" href="#sect14">Sección 14</a></li>  
                 <li class="main__li"><a class="main__a" href="#sect15">Sección 15</a></li>  
             </ul>
@@ -89,9 +89,9 @@
         <section id="sect5" class="main__section">
             <h2 class="main__h2">Responsive Tester</h2>
             <form action="" id="tester" target="_blank">
-                <input class="tester__input" type="text" placeholder="URL.." name="testerUrl" id="tester__url">
-                <input class="tester__input" type="text" placeholder="Width.." name="testerWidth" id="tester__width">
-                <input class="tester__input" type="text" placeholder="Height.." name="testerHeight" id="tester__height">
+                <input class="tester__input" type="text" placeholder="URL.." name="testerUrl" id="tester__url" >
+                <input class="tester__input" type="text" placeholder="Width.." name="testerWidth" id="tester__width" >
+                <input class="tester__input" type="text" placeholder="Height.." name="testerHeight" id="tester__height" >
                 <div class="tester__buttons">
                     <button class="btn tester__btn" id="tester__submit" type="submit">Testear</button>
                     <button class="btn tester__btn" id="tester__cerrar" type="button">Cerrar</button>
@@ -145,10 +145,21 @@
         </section>
         <section id="sect12" class="main__section">
             <h2 class="main__h2">Video Inteligente</h2>
+            <div class="container__smart-video">
+                <video controls muted loop src="assets/video/Cats Kneading.mp4" data-smart-video></video>
+            </div>
         </section>
         </section>
         <section id="sect13" class="main__section">
-            <h2 class="main__h2">Seccion 13</h2>
+            <h2 class="main__h2">Validacion de Formularios</h2>
+            <form id="form__validation" class="form" action="form__submit">
+                <input id="nombre" name="nombre" class="form__input" placeholder="Escribe tu nombre.." type="text" title="Nombre solo puede contener letras (4 a 15)" required>
+                <input id="telefono" name="telefono" class="form__input" placeholder="Escribe el telefono.." type="tel" >
+                <input id="email" name="email" class="form__input" placeholder="Escribe tu email.." type="email" title="El email ingresado es invalido" required>
+                <input id="asunto" name="asunto" class="form__input" placeholder="Escribe el asunto.." type="text" >
+                <textarea id="textarea" placeholder="Dejanos un comentario.." name="comentario" class="form__input" rows="10" cols="40" title="El comentario no debe exceder los 255 caracteres" required></textarea> 
+                <input type="submit" id="form__submit" class="btn" value="Submit">
+            </form>
         </section>
         </section>
         <section id="sect14" class="main__section">

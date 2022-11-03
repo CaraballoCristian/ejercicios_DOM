@@ -4,7 +4,7 @@ export default function filter(){
     const $cards = d.querySelectorAll(".card");
     const $input = d.getElementById("filtro__input");
     let name;
-    let filtro;
+    let filtro = "";
 
     d.addEventListener("keyup", e => {
         if (e.target === $input){

@@ -30,7 +30,7 @@ ul, li{
 
     list-style:none;
 }
-img{
+img,video{
     max-width: 100%;
     height: auto;
 }
@@ -62,7 +62,7 @@ body{
     padding-top: 9vh;
 }
 .main__h2{
-    margin-bottom: 2rem;
+    margin-bottom: 3rem;
 }
 .button_box{
     position: fixed;
@@ -371,6 +371,7 @@ input{
     padding-inline: 2rem;
     box-shadow: inset var(--clr-txt) 0 0 10px;
 }
+/* ////////////////////////////////  BANNER ON/OFF LINE /////////////////////////// */
 .banner{
     position: fixed;
     top: 0;
@@ -586,12 +587,107 @@ input{
     opacity: 0;
 
 }
-/* ///////////////////////////  MOUSE SPY  /////////////////////////// */
+/* ///////////////////////////  VIDEO INTELIGENTE /////////////////////////// */
+.container__smart-video{
+    margin-inline:auto;
+    width: min(800px, 100%);
+}
 
+/* ///////////////////////////  VALIDACION FORMULARIOS  /////////////////////////// */
+.form{
+    display: flex;
+    flex-direction: column;
+
+    width: min(600px, 95%);
+
+    margin-inline:auto;
+    padding-block: 2rem ;
+    
+    border-radius: 10px;
+    border: 4px solid var(--clr-txt);
+    box-shadow: var(--clr-txt) 0 0 10px;
+}
+
+.form__input{
+    width: 75%;
+
+    margin: 1rem auto;
+    padding: .5rem 1.5rem;
+    
+    background-color: transparent;
+    
+    font-size: 1rem;
+    font-family: sans-serif;
+    
+    border:none;
+    border-bottom: var(--clr-txt) solid 3px;
+    border-radius: 50vh;
+    
+    color: var(--clr-txt);
+    
+    transition: all .5s ease;
+}
+.form__input:focus{
+    outline: none;
+    
+}
+#textarea{
+    border: solid 1px;
+    border-bottom: var(--clr-txt) solid 3px;
+    border-radius: 20px;
+    resize: none;
+}
+#form__submit{
+    width: 50%;
+    margin: 2rem auto;
+    box-shadow: inset var(--clr-txt) 0 0 10px;
+}
+.form__valid{
+    box-shadow: hsl(120, 100%, 20%) 0 0 15px, 
+                hsl(120, 100%, 20%) inset 0 0 5px;
+}
+
+.form__invalid{
+    box-shadow: hsl(0, 100%, 30%) 0 0 15px, 
+                hsl(0, 100%, 30%) inset 0 0 5px;
+}
+.span__ok{
+    height: 0;
+    width: 70%;
+
+    margin-inline: auto;
+    margin-top: -1rem;
+    padding-inline: 1.5rem;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: .9rem;
+    font-weight: bold;
+    white-space: nowrap;
+
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+
+    color:transparent;
+    
+    transition: all .3s ease;
+}
+.span__err{
+    height: 4vh;
+    background-color: hsl(0, 70%, 50%);
+    color: var(--clr-sec);
+}
 
 /* ///////////////////////////  AUXILIARES  /////////////////////////// */
-#sect1, #sect2, #sect3, #sect4, #sect5, #sect6, #sect7, #sect8, #sect9, #sect10{
-   
+
+/* ///////////////////////////  AUXILIARES  /////////////////////////// */
+/* ///////////////////////////  AUXILIARES  /////////////////////////// */
+
+/* ///////////////////////////  AUXILIARES  /////////////////////////// */
+#sect1, #sect2, #sect3, #sect4, #sect5, #sect6, #sect7, #sect8, #sect9, #sect10, #sect11, #sect12{
+   display: none;
 }
 
 
