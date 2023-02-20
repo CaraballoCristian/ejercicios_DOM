@@ -17,8 +17,8 @@ export default function scrollSpy(){
     }
     const observer =  new IntersectionObserver(callback,{
         //root: d.querySelector('main'),
-        //rootMargin: "250px",
-        threshold: [.5, .75]
+            rootMargin: "50px",
+            threshold: [.5, .75]
     });
 
     $sections.forEach(sect => {

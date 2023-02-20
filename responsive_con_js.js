@@ -12,6 +12,11 @@ export function responsiveJs(id, breakpoint, mobile, desktop){
             element.innerHTML = mobile;
         }
     }
+    console.log("desktop")
+    console.log(desktop)
+    console.log("mobile")
+    console.log(mobile)
+    console.log("--------------------------")
     
     w.addEventListener("resize", e =>{
         responsive();

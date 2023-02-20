@@ -9,24 +9,24 @@ export default function cardGenerator(cantCards, width, height){
         let topic;
 
         switch(random){
-            case 1: topic = "any";
+            case 1: topic = "dog";
             break;
-            case 2: topic = "nature";
+            case 2: topic = "cars";
             break;
-            case 3: topic = "people";
+            case 3: topic = "girl";
             break;
-            case 4: topic = "arch";
+            case 4: topic = "paris";
             break;
-            case 5: topic = "tech";
+            case 5: topic = "water";
             break;
-            case 6: topic = "animals";
+            case 6: topic = "food";
             break;
             default: break;
         }
 
         $card.classList.add("card");
         $card.innerHTML = `
-            <img class="card__img" src="https://placeimg.com/${Math.min(width, height)}/${Math.min(width, height)}/${topic}.jpg" alt="tarjeta_${i}" >
+            <img class="card__img" src="https://loremflickr.com/${Math.min(width, height)}/${Math.min(width, height)}/${topic}.jpg" alt="tarjeta_${i}" >
             <figcaption class="card__caption">
                 Tarjeta ${i}
             </figcaption>

@@ -30,14 +30,14 @@ d.addEventListener("DOMContentLoaded", e =>{
     alarma();
     countdown(); 
     btnBack();
-    /* responsiveJs(
+    responsiveJs(
         "video", 
         "800", 
         `<a target="_BLANK" href="https://www.youtube.com/embed/NOTUg0306Yc">Ver Video!</a>`,
         `<iframe 
             width="1904" 
             height="772" 
-            src="#"
+            src="https://www.youtube.com/embed/NOTUg0306Yc"
             title="Awesome fight animation" 
             frameborder="0" 
             allow="accelerometer; 
@@ -51,16 +51,17 @@ d.addEventListener("DOMContentLoaded", e =>{
     responsiveJs(
         "maps", 
         "800", 
-        `<a target="_BLANK" href="https://www.google.com/maps">Ver Mapa!</a>` ,
+        `<a target="_BLANK" href="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d11003.60409678948!2d-57.95685522520953!3d-34.921727865850954!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95a2e62dd769b9d7%3A0x8e5a62b28764b5ef!2sCatedral%20de%20La%20Plata!5e0!3m2!1ses!2sar!4v1676914415726!5m2!1ses!2sar">Ver Mapa!</a>` ,
         `<iframe 
-            src="#" 
+            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d11003.60409678948!2d-57.95685522520953!3d-34.921727865850954!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95a2e62dd769b9d7%3A0x8e5a62b28764b5ef!2sCatedral%20de%20La%20Plata!5e0!3m2!1ses!2sar!4v1676914415726!5m2!1ses!2sar" 
             width="600" 
             height="450" 
             style="border:0;" 
             allowfullscreen="" 
             loading="lazy" 
             referrerpolicy="no-referrer-when-downgrade">
-        </iframe>`); */
+        </iframe>`
+    );
     tester();
     deviceDetection();
     webcamDetection();

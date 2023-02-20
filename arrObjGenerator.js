@@ -4,22 +4,22 @@ export default function createArrObj(cant, width, height, title){
         let random = Math.ceil(Math.random()*6);
         let topic;
         switch(random){
-            case 1: topic = "any";
+            case 1: topic = "dog";
             break;
-            case 2: topic = "nature";
+            case 2: topic = "cars";
             break;
-            case 3: topic = "people";
+            case 3: topic = "girl";
             break;
-            case 4: topic = "arch";
+            case 4: topic = "paris";
             break;
-            case 5: topic = "tech";
+            case 5: topic = "water";
             break;
-            case 6: topic = "animals";
+            case 6: topic = "food";
             break;
             default: console.log("default", random);
         }
         arr[i] = {
-            src: `https://placeimg.com/${width}/${height}/${topic}`,
+            src: `https://loremflickr.com/${width}/${height}/${topic}`,
             title: `${title} ${i}`
         }
     }

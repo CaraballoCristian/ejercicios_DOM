@@ -166,7 +166,7 @@ body{
 .main__section{
     height: 100vh;
     
-    padding-block: 5%;
+    padding-block: 5rem;
     padding-inline: 1rem;
     
     background-color: var(--clr-sec);
